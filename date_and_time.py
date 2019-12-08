@@ -20,6 +20,8 @@ def print_days():
     today_month = date.today().month
     today_year = date.today().year
     delta_day = timedelta(days=1)
+    # более простой способ:
+    # prev_month_date = today - timedelta(days=31)
     prev_month_str = str(today_day) + '/' + str(today_month-1) + '/' + str(today_year)
     prev_month_date = datetime.strptime(prev_month_str, '%d/%m/%Y')
     prev_month = prev_month_date.strftime('%Y-%m-%d')
